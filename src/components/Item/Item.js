@@ -10,9 +10,8 @@ class Item extends Component {
 
 
     render() {
-        return (
-            <button className="btn btn-outline-light btn-lg">{this.props.text}</button>
-        );
+        // Pas besoin des parenthèses lorsque ton JSX n'est que sur une ligne
+        return <button className="btn btn-outline-light btn-lg">{this.props.text}</button>;
     }
 }
 Item.propTypes = {};

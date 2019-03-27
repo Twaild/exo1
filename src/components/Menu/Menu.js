@@ -9,9 +9,8 @@ class Menu extends Component {
     }
 
 renderListButton(value){
-    return (
-        <Item text={value} key={value} />
-    )
+    // Pas besoin des parenthèses lorsque ton JSX n'est que sur une ligne
+    return <Item text={value} key={value} />;
 
 }
     render() {
@@ -19,14 +18,14 @@ renderListButton(value){
     if(tab.length > 4 )
         return (
             <div>
-                {tab.map(value => this.renderListButton(value))}
+                {/* Version plus courte qui fait exactement la même chose */}
+                {tab.map(this.renderListButton)}
                 {console.log(tab.length)}
             </div>
         );
     else{
-        return (
-            <div>Il y a rien !</div>
-        )
+        // Pas besoin des parenthèses lorsque ton JSX n'est que sur une ligne
+        return <div>Il y a rien !</div>
     }
     }
 }
